@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Hub Designs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --green-dark: #144d2b;
+      --green-light: #d9f1e2;
+      --white: #ffffff;
+      --gray: #f2f2f2;
+      --gradient-bg: linear-gradient(to bottom right, #eafaf1, #d9f1e2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--gradient-bg);
+      color: var(--green-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .menu {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background: var(--white);
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+
+    nav a {
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--green-dark);
+      border-bottom: 1px solid var(--gray);
+    }
+
+    nav a:hover {
+      background-color: var(--green-light);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1603048295160-9cfec036c786?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--green-dark);
+      padding-left: 1rem;
+    }
+
+    .highlight, .service-box {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .service-box strong {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: var(--green-dark);
+    }
+
+    .contacts i {
+      margin-right: 10px;
+      color: var(--green-dark);
+    }
+
+    footer {
+      background: var(--green-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: none;
+      }
+
+      nav a {
+        border: none;
+        padding: 0 1.5rem;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    <h1>Green Hub</h1>
+    <nav id="nav">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#finhub">FinHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Green Hub Designs</h1>
+      <p>Empowering brands and individuals through impactful, innovative, and purpose-driven design solutions.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="highlight">
+      <p>
+        At Green Hub, we merge creativity with clarity to serve your branding needs. Whether you're an individual, business, or organization — we’ve got a solution that matches your vision.
+      </p>
+    </div>
+    <div class="service-box">
+      <strong>Website Development</strong>
+      Fully responsive, modern websites with smooth performance and beautiful aesthetics.
+      <strong>Logo Design & Branding</strong>
+      Custom-crafted logos and brand identity packs for bold first impressions.
+      <strong>Social Media Marketing</strong>
+      Strategic campaigns and content design that boost engagement and trust.
+      <strong>Mental Health Campaigns</strong>
+      Visual storytelling and advocacy for healing, growth, and awareness.
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="highlight">
+      <ul>
+        <li>Legacy Boutique - Retail elegance</li>
+        <li>Kingdom Realities Logo - Spirit-led design</li>
+        <li>New Life Africa International - Football with purpose</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="finhub">
+    <h2>FinHub</h2>
+    <div class="highlight">
+      <p>
+        Our financial arm, FinHub, helps creatives and startups with budgeting, strategy, and resource planning. We believe in building sustainable brands through smart finances and business clarity.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contacts">
+    <h2>Contact Us</h2>
+    <p><i class="fas fa-phone"></i> 0710474055</p>
+    <p><i class="fas fa-envelope"></i> simonmuraya010@gmail.com</p>
+    <p><i class="fas fa-map-marker-alt"></i> Egerton Gate, Nakuru</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Green Hub Designs. Built with purpose, led by vision.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
